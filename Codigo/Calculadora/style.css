@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Color de fondo ligeramente gris */
+}
+
+.calculator {
+  border: 2px solid #6c7ae0; /* Borde azul */
+  border-radius: 8px;
+  width: 300px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Fondo blanco */
+}
+
+.display {
+  background-color: #6c7ae0; /* Fondo azul */
+  color: #fff; /* Texto blanco */
+  border: 1px solid #6c7ae0; /* Borde azul */
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #d9e6fc; /* Fondo azul claro */
+  color: #333; /* Texto gris oscuro */
+}
+
+button:active {
+  background-color: #a9c4f6; /* Fondo azul más oscuro al hacer clic */
+}
