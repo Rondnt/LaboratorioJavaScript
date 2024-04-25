@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Multired Banco de la Nación</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="header">
+    <img src="imagenes/multired.png" alt="Imagen Izquierda" class="imagen-izquierda">
+    <img src="imagenes/banco.png" alt="Imagen Derecha" class="imagen-derecha">
+  </div>
+
+  <div class="container">
+    <div class="form-group">
+      <label for="selectTipo">Seleccione:</label>
+      <select id="selectTipo">
+        <option value="0">Seleccione</option>
+        <option value="multired_global">Multired Global Débito</option>
+        <option value="dni">DNI (Cuenta Corriente)</option>
+      </select>
+    </div>
+    <div class="form-group" id="numeroTarjetaGroup">
+      <label for="txtNumeroTarjeta">Número de Tarjeta:</label>
+      <input type="text" id="txtNumeroTarjeta" maxlength="16" placeholder="Ingrese el número de tarjeta">
+    </div>
+    <div class="form-group documentos-container">
+      <div id="tipoDocumentoGroup">
+        <label for="selectTipoDocumento">Tipo de Documento:</label>
+        <select id="selectTipoDocumento">
+          <option value="0">Seleccione</option>
+          <option value="DNI">DNI</option>
+          <option value="pasaporte">Pasaporte</option>
+          <option value="C">C (Carné de extranjería)</option>
+          <option value="extranjeria">Extranjería</option>
+          <option value="RUC">RUC</option>
+        </select>
+      </div>
+      <div id="numeroDocumentoGroup">
+        <label for="txtNumeroDocumento">Número de Documento</label>
+        <input type="text" id="txtNumeroDocumento" placeholder="Ingrese el número de documento">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="teclado-clave-container">
+        <div id="tecladoNumerico">
+          <button class="numero">0</button>
+          <button class="numero">1</button>
+          <button class="numero">2</button>
+          <button class="numero">3</button>
+          <button class="numero">4</button>
+          <button class="numero">5</button>
+          <button class="numero">6</button>
+          <button class="numero">7</button>
+          <button class="numero">8</button>
+          <button class="numero">9</button>
+          <button id="limpiar">Limpiar</button>
+        </div>
+        <div class="form-group">
+          <label for="txtClaveInternet">Ingresa tu clave de internet (6 dígitos):</label>
+          <input type="password" id="txtClaveInternet" maxlength="6" placeholder="******">
+        </div>
+      </div>
+    </div>
+    <div class="imagen-texto-container">
+      <div class="imagen-container">
+        <label for="txtTextoImagen">Ingresa el texto de la imagen:</label>
+        <img id="imagenPrincipal" src="imagenes/cap1.jpg" alt="Imagen" class="imagen">
+        <br><button id="btnCambiarTexto">Cambiar texto</button></br>
+      </div>
+  <div class="texto-input-container">
+    <input type="text" id="txtTextoImagen" placeholder="Texto de la imagen">
+  </div>
+</div>
+    <div class="button-container">
+    <button id="btnSubmit">Ingresar</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var numerosTeclado = document.querySelectorAll(".numero");
+
+      // Función para reorganizar los números en el teclado numérico
+      function shuffleNumbers() {
+        // Array con los números del 1 al 9
+        var numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        // Función para reorganizar los números en el teclado numérico
+        function shuffle(array) {
+          for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+          }
+          return array;
+        }
+
+        // Reorganizar los números del 0 al 9
+        numeros = shuffle(numeros);
+
+        // Asignar los números reorganizados a los botones del teclado numérico
+        numerosTeclado.forEach(function(boton, index) {
+          boton.textContent = numeros[index];
+        });
+      }
+
+      shuffleNumbers();
+    });
+  </script>
+</body>
+
+</html>
