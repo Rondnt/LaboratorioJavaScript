@@ -1,0 +1,153 @@
+.imagen-izquierda {
+  float: left;
+  margin-right: 20px;
+  max-width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
+}
+
+.imagen-derecha {
+  float: right;
+  margin-left: 20px;
+  max-width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.documentos-container {
+  display: flex;
+}
+
+#tipoDocumentoGroup,
+#numeroDocumentoGroup {
+  flex: 1;
+  margin-right: 10px; /* Ajusta el margen entre los elementos */
+}
+
+.teclado-clave-container {
+  display: flex;
+}
+
+#tecladoNumerico {
+  display: grid;
+  grid-template-columns: repeat(3, 50px); /* Ancho de los botones */
+  gap: 5px;
+  margin-right: 10px; /* Margen derecho para separar del input de la clave */
+}
+
+#tecladoNumerico button {
+  width: 100%; /* Ancho del botón */
+  height: 50px; /* Alto de los botones */
+  padding: 0; /* Elimina el relleno interno */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #c4c4c4;
+  color: #2e2e2e;
+  cursor: pointer;
+}
+
+#tecladoNumerico #limpiar {
+  grid-column: span 2; /* Ocupar las 3 columnas */
+  height: 50px; /* Alto del botón */
+  width: calc(80% + 20px); /* Aumenta el ancho del botón */
+  background-color: #7a7a7a;
+  color: white;
+}
+
+#tecladoNumerico button:hover {
+  background-color: #bdbdbd;
+  color: #2e2e2e;
+}
+
+#txtClaveInternet {
+  width: calc(100% - 120px); /* Ancho del input - Ancho del teclado numérico */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.button-container {
+  text-align: center; /* Centra horizontalmente el contenido */
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #c0101a;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.imagen {
+  max-width: 100px; /* Ajusta el ancho máximo de la imagen */
+
+}
+
+.rectangulo {
+  width: 100px; /* Ajusta el ancho del rectángulo */
+  height: 100px; /* Ajusta la altura del rectángulo */
+  background-color: #ccc; /* Color de fondo del rectángulo */
+  border: 1px solid #000; /* Borde del rectángulo */
+  border-radius: 5px; /* Radio de borde del rectángulo */
+  float: left; /* Posición a la izquierda */
+  margin-left: 10px; /* Aumenta el margen izquierdo para separar de la imagen */
+}
+
+.imagen-texto-container {
+  display: flex; /* Utiliza el modelo de caja flexible */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Espaciado uniforme entre los elementos */
+  margin-bottom: 20px; /* Añade un espacio por debajo del contenedor */
+}
+
+.imagen-container {
+  margin-right: 20px; /* Añade margen a la derecha de la imagen */
+}
+
+.texto-input-container {
+  flex: 1; /* Permite que este contenedor ocupe todo el espacio restante */
+}
+
+#btnCambiarTexto {
+  margin-right: 10px; /* Ajusta el margen derecho para separar del otro botón */
+  float: left; /* Coloca el botón a la izquierda */
+}
+
+.button-container button {
+  margin-top: 10px; /* Añade un espacio entre los botones */
+}
